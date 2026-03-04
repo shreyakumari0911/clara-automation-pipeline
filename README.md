@@ -1,169 +1,125 @@
-## Clara Automation Pipeline
+## Clara Answers Intern Assignment – Automation Pipeline
 
-Zero-cost, local-only automation pipeline for **"Clara Answers Intern Assignment"**.
+Local, zero-cost pipeline that turns demo + onboarding transcripts into versioned JSON artifacts:
 
-The pipeline converts demo call and onboarding transcripts into structured **Account Memo JSON** and **Retell Agent Draft Spec JSON** configurations, with versioned outputs and changelogs.
+- `memo.json`: structured account memo
+- `agent.json`: Retell agent draft spec
+- `changelog.md`: v1 → v2 changes
 
 **Author**: Shreya Kumari
 
 ---
 
-### Architecture Diagram
-<img width="2241" height="2002" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/ffb49a18-d67a-4451-8b62-359fc5c40750" />
+### Data flow (high level)
 
-
----
-
-### What the Pipeline Produces
-
-For each account (`<account_id>` inferred from the folder name under `demo_calls/`):
-
-- **v1 (demo-derived)**:
-  - `outputs/accounts/<account_id>/v1/memo.json`
-  - `outputs/accounts/<account_id>/v1/agent.json`
-- **v2 (onboarding-confirmed)** (only if onboarding data exists):
-  - `outputs/accounts/<account_id>/v2/memo.json`
-  - `outputs/accounts/<account_id>/v2/agent.json`
-  - `outputs/accounts/<account_id>/v2/changelog.md` (diff between v1 and v2)
-
-Versioning is **idempotent**: re-running regenerates the same paths (no duplicates), and preserves the v1/v2 separation.
-
-Logging is also produced (overwritten each run to keep outputs idempotent):
-- **Global log**: `outputs/pipeline.log`
-- **Per-account log**: `outputs/accounts/<account_id>/pipeline.log`
-
-A free “task tracker” mock is produced as a local file:
-- **Task tracker**: `outputs/tasks.json` (one task per account per stage)
+```mermaid
+flowchart TD
+  A[demo_calls/<account_id>/chat.txt] --> B[v1 memo.json]
+  B --> C[v1 agent.json]
+  D[onboarding_calls/<account_id>/chat.txt] --> E[v2 memo.json]
+  F[onboarding_calls/<account_id>/form.json (optional)] --> E
+  E --> G[v2 agent.json]
+  B --> H[changelog.md]
+  E --> H
+```
 
 ---
 
-### Setup Instructions (Local, Zero-Cost)
+### Project layout
 
-This project uses **Python standard library only** (no paid APIs, no external SDKs).
+```text
+clara-automation-pipeline/
+  demo_calls/<account_id>/chat.txt
+  onboarding_calls/<account_id>/chat.txt
+  onboarding_calls/<account_id>/form.json        (optional)
+  scripts/
+  workflows/
+  outputs/
+```
 
-```bash
-cd clara-automation-pipeline
+---
+
+### Setup (Windows / PowerShell)
+
+```powershell
+cd "D:\ZenAI trade\clara-automation-pipeline"
 python -m venv .venv
-
-# PowerShell
 . .venv/Scripts/Activate.ps1
-
 python --version
 ```
 
----
-
-### Transcript Inputs
-
-Create account folders and place transcripts:
-
-```text
-demo_calls/<account_id>/chat.txt
-onboarding_calls/<account_id>/chat.txt         (optional)
-onboarding_calls/<account_id>/form.json        (optional structured form)
-```
-
-**Rules**:
-- The pipeline **never invents** missing values.
-- Anything not explicitly stated goes into **`questions_or_unknowns`**.
-- Onboarding transcript and form data **override** demo-derived values when present.
-- Structured form overrides are recorded in `notes` as explicit conflict messages.
+No third‑party packages are required (stdlib only).
 
 ---
 
-### How to Run (Batch)
+### Run (batch)
 
-From `clara-automation-pipeline/`:
-
-```bash
+```powershell
 python scripts/run_all.py
 ```
 
-Optional flags:
-
-```bash
-python scripts/run_all.py --root . --demo-dir demo_calls --onboarding-dir onboarding_calls --outputs-dir outputs
-```
+This scans `demo_calls/` and processes every `<account_id>` folder it finds.
 
 ---
 
-### n8n (Optional, Local via Docker)
+### Outputs (per account)
 
-Start n8n:
+For each `<account_id>`:
 
-```bash
+- **v1 (demo)**:
+  - `outputs/accounts/<account_id>/v1/memo.json`
+  - `outputs/accounts/<account_id>/v1/agent.json`
+- **v2 (onboarding)** (only if onboarding data exists):
+  - `outputs/accounts/<account_id>/v2/memo.json`
+  - `outputs/accounts/<account_id>/v2/agent.json`
+  - `outputs/accounts/<account_id>/v2/changelog.md`
+
+Operational artifacts:
+
+- `outputs/pipeline.log` (run log)
+- `outputs/accounts/<account_id>/pipeline.log` (per-account log)
+- `outputs/tasks.json` (local “task tracker” records)
+
+The pipeline is **idempotent**: rerunning overwrites the same output paths.
+
+---
+
+### Extraction rules (important)
+
+- The pipeline **does not invent** missing information.
+- Missing items are left empty and listed under `questions_or_unknowns`.
+- Onboarding transcript/form values **override** demo values.
+- Conflicts/overrides are recorded in `notes`.
+
+---
+
+### Retell (manual import)
+
+This repo generates a “draft spec” (`agent.json`). If you can’t create agents via Retell API on free tier, import manually:
+
+- Create a new agent in Retell UI
+- Copy/paste:
+  - `agent_name`
+  - `voice_style`
+  - `system_prompt`
+
+`tool_invocation_placeholders` are internal placeholders only.
+
+---
+
+### n8n (optional, local)
+
+```powershell
 docker-compose up -d
 ```
 
-Then import `workflows/n8n_workflow.json` into the n8n UI (`http://localhost:5678`).
-The included workflow exposes a webhook and runs:
-
-```text
-python scripts/run_all.py --root /data
-```
+Import `workflows/n8n_workflow.json` in n8n (`http://localhost:5678`). The workflow runs the batch job inside the container.
 
 ---
 
-### Output Schemas
+### Notes / limitations
 
-#### Account Memo (`memo.json`)
-Required keys (always present):
-- `account_id`
-- `company_name`
-- `business_hours` (object with `days`, `start`, `end`, `timezone`, `raw`)
-- `office_address`
-- `services_supported` (list)
-- `emergency_definition` (list of triggers)
-- `emergency_routing_rules` (object with `raw`, `steps`)
-- `non_emergency_routing_rules` (object with `raw`, `steps`)
-- `call_transfer_rules` (object with `raw`, optional `timeout_seconds`, optional `retries`)
-- `integration_constraints`
-- `after_hours_flow_summary`
-- `office_hours_flow_summary`
-- `questions_or_unknowns`
-- `notes`
-
-#### Agent Spec (`agent.json`)
-Required keys:
-- `agent_name`
-- `voice_style`
-- `system_prompt`
-- `key_variables`
-- `tool_invocation_placeholders` (internal-only placeholders)
-- `call_transfer_protocol`
-- `fallback_protocol`
-- `version`
-
----
-
-### Retell Setup (Manual Import)
-
-If Retell free tier does not allow programmatic agent creation, use the generated `agent.json` as the “draft spec”:
-
-- Open Retell UI and create a new agent.
-- Copy/paste:
-  - `agent_name`
-  - `voice_style` (choose a similar voice/tones in UI)
-  - `system_prompt` (paste into the system prompt field)
-- Keep `tool_invocation_placeholders` as internal engineering notes only (do **not** expose to callers).
-
-This repository intentionally does **not** call Retell APIs to preserve the zero-cost constraint and reproducibility.
-
-The `system_prompt` explicitly includes:
-- Business hours call flow
-- After-hours call flow
-- Emergency handling
-- Transfer failure handling
-- Caller closing procedure
-
----
-
-### Limitations
-
-- **Heuristic extraction**: Parsing is rule-based (regex/keywords), so some transcripts won’t yield structured fields without clearer phrasing.
-- **No audio transcription**: Assumes `chat.txt` already exists.
-- **No external integrations**: Integration constraints are captured as text, not enforced via API calls.
-
----
+- Transcript parsing is heuristic (regex/keywords). If a transcript is vague, you’ll see more items in `questions_or_unknowns`.
+- Audio transcription is intentionally out of scope; provide `chat.txt` transcripts as input.
 
 
