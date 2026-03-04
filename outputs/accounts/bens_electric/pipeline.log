@@ -1,0 +1,4 @@
+2026-03-04T09:36:29Z [INFO] Generating v1 from demo transcript
+2026-03-04T09:36:29Z [INFO] Found onboarding transcript – generating v2 and changelog
+2026-03-04T09:36:29Z [INFO] Found structured onboarding form – merging on top of transcripts
+2026-03-04T09:36:29Z [INFO] Generated v2 memo, agent, and changelog

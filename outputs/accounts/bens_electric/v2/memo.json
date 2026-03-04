@@ -1,0 +1,55 @@
+{
+  "account_id": "bens_electric",
+  "company_name": "Ben's Electric",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "PT",
+    "raw": "Mon–Fri 8:00 AM–5:00 PM PT"
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [
+    "any electrical issue that causes sparking",
+    "burning smell",
+    "loss of power to critical systems",
+    "immediate safety risk"
+  ],
+  "emergency_routing_rules": {
+    "raw": "All emergencies should be transferred to the phone tree for dispatch.",
+    "steps": [
+      "All emergencies should be transferred to the phone tree for dispatch."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "Non-emergency calls after hours should be collected and followed up during the next business day.",
+    "steps": [
+      "Non-emergency calls after hours should be collected and followed up during the next business day."
+    ]
+  },
+  "call_transfer_rules": {
+    "raw": "For emergencies, transfer to dispatch phone tree. If transfer does not connect within 60 seconds, return to caller, take a message (name, callback number, service address), and notify dispatch.",
+    "timeout_seconds": 60,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "ServiceTrade is used. Do not create sprinkler jobs in ServiceTrade. Automation should only capture details and hand off to humans unless explicitly enabled.",
+  "after_hours_flow_summary": "After hours, first confirm if this is an emergency. Non-emergency calls after hours should be collected and followed up during the next business day.",
+  "office_hours_flow_summary": "Non-emergency requests can be scheduled during business hours.",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript)."
+  ],
+  "notes": [
+    "Structured form override for 'business_hours': 'raw' overridden: previous='Business hours are Monday through Friday, 8:00 AM to 5:00 PM, Pacific Time.', new='Mon–Fri 8:00 AM–5:00 PM PT'.",
+    "Structured form override for 'call_transfer_rules': 'raw' overridden: previous='If the transfer fails after 60 seconds, notify dispatch and take a message with caller name, callback number, and service address.', new='For emergencies, transfer to dispatch phone tree. If transfer does not connect within 60 seconds, return to caller, take a message (name, callback number, service address), and notify dispatch.'.",
+    "Structured form override for 'integration_constraints': previous value='Never create sprinkler jobs in ServiceTrade.', new value='ServiceTrade is used. Do not create sprinkler jobs in ServiceTrade. Automation should only capture details and hand off to humans unless explicitly enabled.'."
+  ]
+}

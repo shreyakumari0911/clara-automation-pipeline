@@ -1,0 +1,49 @@
+{
+  "account_id": "bens_electric",
+  "company_name": "Ben's Electric",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "",
+    "raw": "We are open Monday to Friday 8am to 5pm."
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [],
+  "emergency_routing_rules": {
+    "raw": "If it's an emergency, transfer the call to dispatch. Transfer the call to dispatch for emergencies.",
+    "steps": [
+      "If it's an emergency, transfer the call to dispatch.",
+      "Transfer the call to dispatch for emergencies."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "transfer the call to dispatch.",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "We use ServiceTrade for job management, but we cannot create jobs automatically yet.",
+  "after_hours_flow_summary": "",
+  "office_hours_flow_summary": "Non-emergency requests can be scheduled during business hours.",
+  "questions_or_unknowns": [
+    "Business hours timezone missing or unclear.",
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript).",
+    "Missing emergency definition (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript).",
+    "Missing after-hours flow summary (not found or unclear in transcript)."
+  ],
+  "notes": []
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "task_key": "bens_electric:demo_processed",
+    "account_id": "bens_electric",
+    "stage": "demo_processed",
+    "status": "open",
+    "summary": "Demo processed for bens_electric; v1 memo/agent generated.",
+    "links": {
+      "memo_v1": "accounts\\bens_electric\\v1\\memo.json",
+      "agent_v1": "accounts\\bens_electric\\v1\\agent.json"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "bens_electric:onboarding_processed",
+    "account_id": "bens_electric",
+    "stage": "onboarding_processed",
+    "status": "open",
+    "summary": "Onboarding processed for bens_electric; v2 memo/agent generated with changelog.",
+    "links": {
+      "memo_v2": "accounts\\bens_electric\\v2\\memo.json",
+      "agent_v2": "accounts\\bens_electric\\v2\\agent.json",
+      "changelog": "accounts\\bens_electric\\v2\\changelog.md"
+    },
+    "metadata": {}
+  }
+]

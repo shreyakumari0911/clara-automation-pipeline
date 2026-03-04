@@ -1,0 +1,6 @@
+{
+  "business_hours": "Mon–Fri 8:00 AM–5:00 PM PT",
+  "call_transfer_rules": "For emergencies, transfer to dispatch phone tree. If transfer does not connect within 60 seconds, return to caller, take a message (name, callback number, service address), and notify dispatch.",
+  "integration_constraints": "ServiceTrade is used. Do not create sprinkler jobs in ServiceTrade. Automation should only capture details and hand off to humans unless explicitly enabled."
+}
+

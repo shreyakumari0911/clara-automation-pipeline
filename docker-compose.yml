@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=false
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - GENERIC_TIMEZONE=UTC
+      - N8N_PERSONALIZATION_ENABLED=false
+      - EXECUTIONS_PROCESS=main
+    volumes:
+      # Mount repository into /data so n8n can run scripts and access datasets
+      - ./:/data
+    working_dir: /data

@@ -1,0 +1,51 @@
+{
+    "name": "Clara Automation Pipeline – Run All",
+    "nodes": [
+      {
+        "parameters": {
+          "path": "clara-automation/run",
+          "options": {}
+        },
+        "id": "Webhook_Trigger",
+        "name": "Webhook Trigger",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          260,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "command": "python",
+          "arguments": "scripts/run_all.py --root /data"
+        },
+        "id": "Execute_Command",
+        "name": "Execute Command",
+        "type": "n8n-nodes-base.executeCommand",
+        "typeVersion": 1,
+        "position": [
+          520,
+          300
+        ]
+      }
+    ],
+    "connections": {
+      "Webhook Trigger": {
+        "main": [
+          [
+            {
+              "node": "Execute Command",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "active": false,
+    "settings": {
+      "saveExecutionProgress": "no"
+    },
+    "versionId": "1"
+  }

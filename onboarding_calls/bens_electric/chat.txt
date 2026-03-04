@@ -1,0 +1,8 @@
+Company: Ben's Electric
+Business hours are Monday through Friday, 8:00 AM to 5:00 PM, Pacific Time.
+After hours, first confirm if this is an emergency.
+An emergency is any electrical issue that causes sparking, burning smell, loss of power to critical systems, or immediate safety risk.
+All emergencies should be transferred to the phone tree for dispatch.
+If the transfer fails after 60 seconds, notify dispatch and take a message with caller name, callback number, and service address.
+Non-emergency calls after hours should be collected and followed up during the next business day.
+Never create sprinkler jobs in ServiceTrade.

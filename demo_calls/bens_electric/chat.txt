@@ -1,0 +1,6 @@
+Company: Ben's Electric
+We are open Monday to Friday 8am to 5pm.
+If it's an emergency, transfer the call to dispatch.
+Non-emergency requests can be scheduled during business hours.
+Transfer the call to dispatch for emergencies.
+We use ServiceTrade for job management, but we cannot create jobs automatically yet.
