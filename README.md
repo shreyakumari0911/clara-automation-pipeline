@@ -12,37 +12,6 @@ The pipeline converts demo call and onboarding transcripts into structured **Acc
 <img width="2241" height="2002" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/ffb49a18-d67a-4451-8b62-359fc5c40750" />
 
 
-### Repository Structure
-
-clara-automation-pipeline/
-  dataset/
-  demo_calls/
-    <account_id>/
-      chat.txt
-  onboarding_calls/
-    <account_id>/
-      chat.txt
-  scripts/
-    extract_account_data.py
-    generate_agent_prompt.py
-    apply_patch.py
-    diff_generator.py
-    run_all.py
-  outputs/
-    accounts/
-      <account_id>/
-        v1/
-          memo.json
-          agent.json
-        v2/
-          memo.json
-          agent.json
-          changelog.md
-  workflows/
-    n8n_workflow.json
-  docker-compose.yml
-  README.md
-
 ---
 
 ### What the Pipeline Produces
