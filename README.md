@@ -9,7 +9,13 @@ Local, zero-cost pipeline that turns demo + onboarding transcripts into versione
 **Author**: Shreya Kumari
 
 ---
+**Explanation video**
 
+
+Uploading Video Project 2.mp4…
+
+
+---
 ### Data flow (high level)
 
 ```mermaid
