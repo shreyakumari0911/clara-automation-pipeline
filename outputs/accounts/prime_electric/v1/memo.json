@@ -1,0 +1,53 @@
+{
+  "account_id": "prime_electric",
+  "company_name": "Prime Electric Service",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "08:00",
+    "end": "16:00",
+    "timezone": "MT",
+    "raw": "During the day we’re open from 8 AM to 4 PM Mountain Time, Monday to Friday. Calls should be answered, basic info taken, and then routed to whichever estimator or journeyman is handling that customer."
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [
+    "any situation with visible arcing",
+    "burning smell from an electrical panel",
+    "main power out to an entire building",
+    "anything the fire department tells them is unsafe"
+  ],
+  "emergency_routing_rules": {
+    "raw": "We do small commercial electrical service work: panel issues, breaker trips, outlet problems, and lighting repairs. The reason we’re interested in Clara is to make sure after-hours emergency calls don’t go to voicemail.",
+    "steps": [
+      "We do small commercial electrical service work: panel issues, breaker trips, outlet problems, and lighting repairs. The reason we’re interested in Clara is to make sure after-hours emergency calls don’t go to voicemail."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "We don’t have any fancy integrations yet. Everything gets written down and later entered into QuickBooks and our shared calendar.",
+  "after_hours_flow_summary": "",
+  "office_hours_flow_summary": "",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript).",
+    "Missing call transfer rules (not found or unclear in transcript).",
+    "Missing after-hours flow summary (not found or unclear in transcript).",
+    "Missing office-hours flow summary (not found or unclear in transcript)."
+  ],
+  "notes": []
+}

@@ -1,0 +1,6 @@
+{
+  "business_hours": "Mon–Fri 9:00 AM–5:00 PM ET",
+  "call_transfer_rules": "For qualifying fire alarm emergencies, transfer to the on-call alarm technician. If the transfer rings for more than 60 seconds, return to the caller, apologize, and confirm the technician will call back quickly.",
+  "integration_constraints": "Use internal alarm ticketing only; Clara must not reference or depend on any external system."
+}
+

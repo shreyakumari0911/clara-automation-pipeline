@@ -1,0 +1,6 @@
+{
+  "business_hours": "Mon–Fri 7:30 AM–5:00 PM CT",
+  "call_transfer_rules": "During business hours transfer emergency unit-down calls to the dispatcher queue. After hours transfer emergencies to the on-call dispatcher; if no answer within 45 seconds, return to caller, apologize, and take a full message.",
+  "integration_constraints": "Internal HVAC ticketing system only; Clara should not log into or modify any external systems."
+}
+

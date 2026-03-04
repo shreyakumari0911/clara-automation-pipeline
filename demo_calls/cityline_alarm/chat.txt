@@ -1,0 +1,13 @@
+Speaker: General Manager
+Company: CityLine Alarm & Monitoring
+
+We install and service fire alarm and security alarm panels for small commercial customers. We already have a monitoring center that handles actual alarm events, so Clara should not try to replace that.
+
+Our office hours are 9 AM to 5 PM Eastern, Monday through Friday. During that time, calls about billing or new installs go to the office, while service calls go to the service queue.
+
+For emergencies, we only want Clara to escalate if the monitoring center has already called them and they are following up, or if there is an active trouble on the fire alarm panel that is beeping continuously and they cannot silence it.
+
+A lot of our calls are non-emergency: low-priority troubles, beeping keypads on security systems, and programming questions. Those can wait until office hours.
+
+We use our own internal ticketing system, not ServiceTrade. Clara should not try to log into anything; just capture the situation clearly so our team can open a ticket.
+

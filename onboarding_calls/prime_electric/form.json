@@ -1,0 +1,6 @@
+{
+  "business_hours": "Mon–Fri 8:00 AM–4:00 PM MT",
+  "call_transfer_rules": "For emergencies transfer to the on-call electrician. If there is no answer within 60 seconds, return to the caller, apologize, and confirm that the on-call will call back as soon as possible.",
+  "integration_constraints": "QuickBooks and internal calendar only. Clara cannot book appointments or create jobs directly."
+}
+

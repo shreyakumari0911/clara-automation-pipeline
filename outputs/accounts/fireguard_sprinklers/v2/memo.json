@@ -1,0 +1,56 @@
+{
+  "account_id": "fireguard_sprinklers",
+  "company_name": "FireGuard Sprinkler Services",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "08:00",
+    "end": "16:30",
+    "timezone": "PT",
+    "raw": "Mon–Fri 8:00 AM–4:30 PM PT"
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [
+    "actively leaking",
+    "a head has been damaged",
+    "we consider that an emergency. Same thing if the fire department has been out",
+    "they tell the customer to call us right away"
+  ],
+  "emergency_routing_rules": {
+    "raw": "Let me confirm our exact hours. We are open Monday through Friday, 8:00 AM to 4:30 PM Pacific Time. We do not take routine calls on weekends unless they are emergencies. After hours, Clara should immediately determine whether the situation fits that emergency definition. If it does, collect the caller name, callback number, job site address, and a short description, then attempt to transfer to the on‑call tech at the on‑call number we will provide. If the call rings for more than 60 seconds, cancel the transfer, go back to the caller, and apologize, then confirm all details so we can dispatch manually.",
+    "steps": [
+      "Let me confirm our exact hours. We are open Monday through Friday, 8:00 AM to 4:30 PM Pacific Time. We do not take routine calls on weekends unless they are emergencies.",
+      "After hours, Clara should immediately determine whether the situation fits that emergency definition. If it does, collect the caller name, callback number, job site address, and a short description, then attempt to transfer to the on‑call tech at the on‑call number we will provide. If the call rings for more than 60 seconds, cancel the transfer, go back to the caller, and apologize, then confirm all details so we can dispatch manually."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "If after hours and it is not an emergency, Clara should collect the same information but clearly tell the caller that the office will follow up during the next business day.",
+    "steps": [
+      "If after hours and it is not an emergency, Clara should collect the same information but clearly tell the caller that the office will follow up during the next business day."
+    ]
+  },
+  "call_transfer_rules": {
+    "raw": "During business hours transfer inspection and minor repair calls to the service coordinator at extension 102. After hours, for emergencies transfer to the on-call technician and if it rings more than 60 seconds return to the caller, apologize, and take a full message.",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "ServiceTrade is used for all jobs. Clara must not create or modify jobs directly; only capture details for the office.",
+  "after_hours_flow_summary": "After hours, Clara should immediately determine whether the situation fits that emergency definition. If it does, collect the caller name, callback number, job site address, and a short description, then attempt to transfer to the on‑call tech at the on‑call number we will provide. If the call rings for more than 60 seconds, cancel the transfer, go back to the caller, and apologize, then confirm all details so we can dispatch manually. If after hours and it is not an emergency, Clara should collect the same information but clearly tell the caller that the office will follow up during the next business day.",
+  "office_hours_flow_summary": "During business hours, if someone is calling about an inspection or a minor repair, Clara should collect their name, callback number, site address, and what they need, then transfer to the service coordinator at extension 102. If the coordinator does not answer, take a message rather than looping the transfer.",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript)."
+  ],
+  "notes": [
+    "Structured form override for 'business_hours': 'raw' overridden: previous='Let me confirm our exact hours. We are open Monday through Friday, 8:00 AM to 4:30 PM Pacific Time. We do not take routine calls on weekends unless they are emergencies.', new='Mon–Fri 8:00 AM–4:30 PM PT'.",
+    "Structured form override for 'call_transfer_rules': 'raw' overridden: previous='During business hours, if someone is calling about an inspection or a minor repair, Clara should collect their name, callback number, site address, and what they need, then transfer to the service coordinator at extension 102. If the coordinator does not answer, take a message rather than looping the transfer.', new='During business hours transfer inspection and minor repair calls to the service coordinator at extension 102. After hours, for emergencies transfer to the on-call technician and if it rings more than 60 seconds return to the caller, apologize, and take a full message.'.",
+    "Structured form override for 'integration_constraints': previous value='We use ServiceTrade only for scheduling and documentation. Do not let Clara promise that a job is created; just say that the office will review and schedule.', new value='ServiceTrade is used for all jobs. Clara must not create or modify jobs directly; only capture details for the office.'."
+  ]
+}

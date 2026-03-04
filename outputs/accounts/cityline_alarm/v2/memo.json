@@ -1,0 +1,53 @@
+{
+  "account_id": "cityline_alarm",
+  "company_name": "CityLine Alarm & Monitoring",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "09:00",
+    "end": "17:00",
+    "timezone": "ET",
+    "raw": "Mon–Fri 9:00 AM–5:00 PM ET"
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [],
+  "emergency_routing_rules": {
+    "raw": "For emergencies we only want Clara to escalate when either the monitoring center has already contacted the customer about an alarm or when there is a continuous trouble on the fire alarm panel that the customer cannot silence. Those should be called out as high priority. After hours, if the situation matches that emergency definition, Clara should capture the same details and then page the on‑call technician by transferring to the on‑call number. If the transfer rings more than 60 seconds, Clara should return to the caller, apologize, and promise a callback as soon as the technician receives the page. Non‑emergency calls after hours can be logged with all details and clearly tagged as next‑business‑day follow up.",
+    "steps": [
+      "For emergencies we only want Clara to escalate when either the monitoring center has already contacted the customer about an alarm or when there is a continuous trouble on the fire alarm panel that the customer cannot silence. Those should be called out as high priority.",
+      "After hours, if the situation matches that emergency definition, Clara should capture the same details and then page the on‑call technician by transferring to the on‑call number. If the transfer rings more than 60 seconds, Clara should return to the caller, apologize, and promise a callback as soon as the technician receives the page.",
+      "Non‑emergency calls after hours can be logged with all details and clearly tagged as next‑business‑day follow up."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "A lot of our calls are non-emergency: low-priority troubles, beeping keypads on security systems, and programming questions. Those can wait until office hours.",
+    "steps": [
+      "A lot of our calls are non-emergency: low-priority troubles, beeping keypads on security systems, and programming questions. Those can wait until office hours."
+    ]
+  },
+  "call_transfer_rules": {
+    "raw": "For qualifying fire alarm emergencies, transfer to the on-call alarm technician. If the transfer rings for more than 60 seconds, return to the caller, apologize, and confirm the technician will call back quickly.",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "Use internal alarm ticketing only; Clara must not reference or depend on any external system.",
+  "after_hours_flow_summary": "After hours, if the situation matches that emergency definition, Clara should capture the same details and then page the on‑call technician by transferring to the on‑call number. If the transfer rings more than 60 seconds, Clara should return to the caller, apologize, and promise a callback as soon as the technician receives the page. Non‑emergency calls after hours can be logged with all details and clearly tagged as next‑business‑day follow up.",
+  "office_hours_flow_summary": "During office hours, Clara should collect caller name, site name, callback number, panel type if they know it, and whether the monitoring center has called. Then route to the service queue.",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript).",
+    "Missing emergency definition (not found or unclear in transcript)."
+  ],
+  "notes": [
+    "Structured form override for 'business_hours': 'raw' overridden: previous='Our standard hours are Monday through Friday, 9:00 AM to 5:00 PM Eastern Time. Billing and sales calls go to the main office line; service issues go to the service queue.', new='Mon–Fri 9:00 AM–5:00 PM ET'.",
+    "Structured form override for 'call_transfer_rules': 'raw' overridden: previous='After hours, if the situation matches that emergency definition, Clara should capture the same details and then page the on‑call technician by transferring to the on‑call number. If the transfer rings more than 60 seconds, Clara should return to the caller, apologize, and promise a callback as soon as the technician receives the page.', new='For qualifying fire alarm emergencies, transfer to the on-call alarm technician. If the transfer rings for more than 60 seconds, return to the caller, apologize, and confirm the technician will call back quickly.'.",
+    "Structured form override for 'integration_constraints': previous value='We use our own internal ticketing system, not ServiceTrade. Clara should not try to log into anything; just capture the situation clearly so our team can open a ticket.', new value='Use internal alarm ticketing only; Clara must not reference or depend on any external system.'."
+  ]
+}

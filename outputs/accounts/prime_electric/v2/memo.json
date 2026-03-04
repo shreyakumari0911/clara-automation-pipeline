@@ -1,0 +1,52 @@
+{
+  "account_id": "prime_electric",
+  "company_name": "Prime Electric Service",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "08:00",
+    "end": "16:00",
+    "timezone": "MT",
+    "raw": "Mon–Fri 8:00 AM–4:00 PM MT"
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [
+    "unsafe"
+  ],
+  "emergency_routing_rules": {
+    "raw": "After hours, if the issue matches that emergency definition, Clara should collect full details and attempt to reach the on‑call electrician. If no one answers within 60 seconds, Clara must go back to the caller, apologize, and clearly state that the on‑call electrician will return their call as soon as possible. Non‑emergency calls after hours should still be logged with the same information, but Clara should promise only a next‑business‑day callback.",
+    "steps": [
+      "After hours, if the issue matches that emergency definition, Clara should collect full details and attempt to reach the on‑call electrician. If no one answers within 60 seconds, Clara must go back to the caller, apologize, and clearly state that the on‑call electrician will return their call as soon as possible.",
+      "Non‑emergency calls after hours should still be logged with the same information, but Clara should promise only a next‑business‑day callback."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "For emergencies transfer to the on-call electrician. If there is no answer within 60 seconds, return to the caller, apologize, and confirm that the on-call will call back as soon as possible.",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "QuickBooks and internal calendar only. Clara cannot book appointments or create jobs directly.",
+  "after_hours_flow_summary": "After hours, if the issue matches that emergency definition, Clara should collect full details and attempt to reach the on‑call electrician. If no one answers within 60 seconds, Clara must go back to the caller, apologize, and clearly state that the on‑call electrician will return their call as soon as possible. Non‑emergency calls after hours should still be logged with the same information, but Clara should promise only a next‑business‑day callback.",
+  "office_hours_flow_summary": "During business hours Clara should capture the caller name, company, callback number, and service address. If the reason is panel issues, repeated breaker trips, or building-wide outages, the call should be transferred to the service lead. For simple outlet or lighting issues, taking a message is fine.",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript)."
+  ],
+  "notes": [
+    "Structured form override for 'business_hours': 'raw' overridden: previous='Confirming hours: we are open Monday through Friday, 8:00 AM to 4:00 PM Mountain Time. We do not run a weekend office.', new='Mon–Fri 8:00 AM–4:00 PM MT'.",
+    "Structured form override for 'call_transfer_rules': 'raw' overridden: previous='During business hours Clara should capture the caller name, company, callback number, and service address. If the reason is panel issues, repeated breaker trips, or building-wide outages, the call should be transferred to the service lead. For simple outlet or lighting issues, taking a message is fine.', new='For emergencies transfer to the on-call electrician. If there is no answer within 60 seconds, return to the caller, apologize, and confirm that the on-call will call back as soon as possible.'.",
+    "Structured form override for 'integration_constraints': previous value='We use QuickBooks and a shared calendar internally. Clara should not promise appointment times or say that a job has been booked; just that our office will schedule and confirm.', new value='QuickBooks and internal calendar only. Clara cannot book appointments or create jobs directly.'."
+  ]
+}

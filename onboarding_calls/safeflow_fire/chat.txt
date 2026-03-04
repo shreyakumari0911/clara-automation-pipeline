@@ -1,0 +1,15 @@
+Speaker: Service Coordinator
+Company: SafeFlow Fire Protection
+
+Our business hours are Monday through Friday, 7:00 AM to 3:30 PM Pacific Time. After that we switch to an on‑call rotation.
+
+During business hours, Clara should gather caller name, callback number, building name, and address. If the call is about inspections or testing, taking a message and putting it in the inspection work queue is fine. If the call is about a known system impairment, Clara should flag it as high priority and transfer to the coordinator.
+
+We define emergencies as active leaks, broken sprinkler piping, system trips that leave the building without protection, fire pumps that will not start on test, or red tags from the fire marshal.
+
+After hours, Clara needs to decide if it is an emergency based on that definition. For emergencies, collect full details and then transfer to the on‑call technician. If the transfer rings longer than 60 seconds, cancel the transfer, return to the caller, apologize, and confirm that the tech will call back as soon as they receive the page.
+
+For non‑emergency calls after hours, log all the information and let the caller know that the office will follow up during the next business day.
+
+We use ServiceTrade for all fire protection work. Clara must never create jobs or change schedules in ServiceTrade; only capture information for our staff.
+

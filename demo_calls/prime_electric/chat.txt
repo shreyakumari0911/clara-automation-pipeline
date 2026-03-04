@@ -1,0 +1,13 @@
+Speaker: Owner
+Company: Prime Electric Service
+
+We do small commercial electrical service work: panel issues, breaker trips, outlet problems, and lighting repairs. The reason we’re interested in Clara is to make sure after-hours emergency calls don’t go to voicemail.
+
+During the day we’re open from 8 AM to 4 PM Mountain Time, Monday to Friday. Calls should be answered, basic info taken, and then routed to whichever estimator or journeyman is handling that customer.
+
+For us, an emergency is any situation with visible arcing, burning smell from an electrical panel, main power out to an entire building, or anything the fire department tells them is unsafe.
+
+A non-emergency would be a single outlet not working or a light out in a non-critical area.
+
+We don’t have any fancy integrations yet. Everything gets written down and later entered into QuickBooks and our shared calendar.
+

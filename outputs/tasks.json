@@ -23,5 +23,130 @@
       "changelog": "accounts\\bens_electric\\v2\\changelog.md"
     },
     "metadata": {}
+  },
+  {
+    "task_key": "cityline_alarm:demo_processed",
+    "account_id": "cityline_alarm",
+    "stage": "demo_processed",
+    "status": "open",
+    "summary": "Demo processed for cityline_alarm; v1 memo/agent generated.",
+    "links": {
+      "memo_v1": "accounts\\cityline_alarm\\v1\\memo.json",
+      "agent_v1": "accounts\\cityline_alarm\\v1\\agent.json"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "cityline_alarm:onboarding_processed",
+    "account_id": "cityline_alarm",
+    "stage": "onboarding_processed",
+    "status": "open",
+    "summary": "Onboarding processed for cityline_alarm; v2 memo/agent generated with changelog.",
+    "links": {
+      "memo_v2": "accounts\\cityline_alarm\\v2\\memo.json",
+      "agent_v2": "accounts\\cityline_alarm\\v2\\agent.json",
+      "changelog": "accounts\\cityline_alarm\\v2\\changelog.md"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "fireguard_sprinklers:demo_processed",
+    "account_id": "fireguard_sprinklers",
+    "stage": "demo_processed",
+    "status": "open",
+    "summary": "Demo processed for fireguard_sprinklers; v1 memo/agent generated.",
+    "links": {
+      "memo_v1": "accounts\\fireguard_sprinklers\\v1\\memo.json",
+      "agent_v1": "accounts\\fireguard_sprinklers\\v1\\agent.json"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "fireguard_sprinklers:onboarding_processed",
+    "account_id": "fireguard_sprinklers",
+    "stage": "onboarding_processed",
+    "status": "open",
+    "summary": "Onboarding processed for fireguard_sprinklers; v2 memo/agent generated with changelog.",
+    "links": {
+      "memo_v2": "accounts\\fireguard_sprinklers\\v2\\memo.json",
+      "agent_v2": "accounts\\fireguard_sprinklers\\v2\\agent.json",
+      "changelog": "accounts\\fireguard_sprinklers\\v2\\changelog.md"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "northside_hvac:demo_processed",
+    "account_id": "northside_hvac",
+    "stage": "demo_processed",
+    "status": "open",
+    "summary": "Demo processed for northside_hvac; v1 memo/agent generated.",
+    "links": {
+      "memo_v1": "accounts\\northside_hvac\\v1\\memo.json",
+      "agent_v1": "accounts\\northside_hvac\\v1\\agent.json"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "northside_hvac:onboarding_processed",
+    "account_id": "northside_hvac",
+    "stage": "onboarding_processed",
+    "status": "open",
+    "summary": "Onboarding processed for northside_hvac; v2 memo/agent generated with changelog.",
+    "links": {
+      "memo_v2": "accounts\\northside_hvac\\v2\\memo.json",
+      "agent_v2": "accounts\\northside_hvac\\v2\\agent.json",
+      "changelog": "accounts\\northside_hvac\\v2\\changelog.md"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "prime_electric:demo_processed",
+    "account_id": "prime_electric",
+    "stage": "demo_processed",
+    "status": "open",
+    "summary": "Demo processed for prime_electric; v1 memo/agent generated.",
+    "links": {
+      "memo_v1": "accounts\\prime_electric\\v1\\memo.json",
+      "agent_v1": "accounts\\prime_electric\\v1\\agent.json"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "prime_electric:onboarding_processed",
+    "account_id": "prime_electric",
+    "stage": "onboarding_processed",
+    "status": "open",
+    "summary": "Onboarding processed for prime_electric; v2 memo/agent generated with changelog.",
+    "links": {
+      "memo_v2": "accounts\\prime_electric\\v2\\memo.json",
+      "agent_v2": "accounts\\prime_electric\\v2\\agent.json",
+      "changelog": "accounts\\prime_electric\\v2\\changelog.md"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "safeflow_fire:demo_processed",
+    "account_id": "safeflow_fire",
+    "stage": "demo_processed",
+    "status": "open",
+    "summary": "Demo processed for safeflow_fire; v1 memo/agent generated.",
+    "links": {
+      "memo_v1": "accounts\\safeflow_fire\\v1\\memo.json",
+      "agent_v1": "accounts\\safeflow_fire\\v1\\agent.json"
+    },
+    "metadata": {}
+  },
+  {
+    "task_key": "safeflow_fire:onboarding_processed",
+    "account_id": "safeflow_fire",
+    "stage": "onboarding_processed",
+    "status": "open",
+    "summary": "Onboarding processed for safeflow_fire; v2 memo/agent generated with changelog.",
+    "links": {
+      "memo_v2": "accounts\\safeflow_fire\\v2\\memo.json",
+      "agent_v2": "accounts\\safeflow_fire\\v2\\agent.json",
+      "changelog": "accounts\\safeflow_fire\\v2\\changelog.md"
+    },
+    "metadata": {}
   }
 ]

@@ -1,0 +1,15 @@
+Speaker: Owner
+Company: Prime Electric Service
+
+Confirming hours: we are open Monday through Friday, 8:00 AM to 4:00 PM Mountain Time. We do not run a weekend office.
+
+During business hours Clara should capture the caller name, company, callback number, and service address. If the reason is panel issues, repeated breaker trips, or building-wide outages, the call should be transferred to the service lead. For simple outlet or lighting issues, taking a message is fine.
+
+We define an emergency as visible arcing, sparks, or smoke from electrical equipment, a burning smell from the main panel, complete loss of power to the building, or anything the fire department has told them is unsafe.
+
+After hours, if the issue matches that emergency definition, Clara should collect full details and attempt to reach the on‑call electrician. If no one answers within 60 seconds, Clara must go back to the caller, apologize, and clearly state that the on‑call electrician will return their call as soon as possible.
+
+Non‑emergency calls after hours should still be logged with the same information, but Clara should promise only a next‑business‑day callback.
+
+We use QuickBooks and a shared calendar internally. Clara should not promise appointment times or say that a job has been booked; just that our office will schedule and confirm.
+

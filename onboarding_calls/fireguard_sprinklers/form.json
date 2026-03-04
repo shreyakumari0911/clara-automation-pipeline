@@ -1,0 +1,6 @@
+{
+  "business_hours": "Mon–Fri 8:00 AM–4:30 PM PT",
+  "call_transfer_rules": "During business hours transfer inspection and minor repair calls to the service coordinator at extension 102. After hours, for emergencies transfer to the on-call technician and if it rings more than 60 seconds return to the caller, apologize, and take a full message.",
+  "integration_constraints": "ServiceTrade is used for all jobs. Clara must not create or modify jobs directly; only capture details for the office."
+}
+

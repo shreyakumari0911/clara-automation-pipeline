@@ -1,0 +1,48 @@
+{
+  "account_id": "fireguard_sprinklers",
+  "company_name": "FireGuard Sprinkler Services",
+  "business_hours": {
+    "days": [],
+    "start": "",
+    "end": "",
+    "timezone": "",
+    "raw": ""
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [
+    "actively leaking",
+    "a head has been damaged",
+    "we consider that an emergency. Same thing if the fire department has been out",
+    "they tell the customer to call us right away"
+  ],
+  "emergency_routing_rules": {
+    "raw": "Our main issue is missed after-hours calls. Right now we forward everything to a single cell phone, and if that person is on another call, emergencies get missed. If a sprinkler is actively leaking or a head has been damaged, we consider that an emergency. Same thing if the fire department has been out and they tell the customer to call us right away.",
+    "steps": [
+      "Our main issue is missed after-hours calls. Right now we forward everything to a single cell phone, and if that person is on another call, emergencies get missed.",
+      "If a sprinkler is actively leaking or a head has been damaged, we consider that an emergency. Same thing if the fire department has been out and they tell the customer to call us right away."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "We use ServiceTrade for all jobs. For now, Clara should not create jobs directly; just capture details so the office can create the job in the morning.",
+  "after_hours_flow_summary": "Right now after hours we ask callers to leave a voicemail and then the tech on call checks it. Half the time they forget to leave a callback number. We want Clara to capture the name, callback number, and what’s going on, then try to reach the on-call tech.",
+  "office_hours_flow_summary": "",
+  "questions_or_unknowns": [
+    "Missing business hours (not found or unclear in transcript).",
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript).",
+    "Missing call transfer rules (not found or unclear in transcript).",
+    "Missing office-hours flow summary (not found or unclear in transcript)."
+  ],
+  "notes": []
+}

@@ -1,0 +1,13 @@
+Speaker: Service Coordinator
+Company: SafeFlow Fire Protection
+
+We manage inspections and repairs for fire sprinklers, fire pumps, and standpipe systems. The volume of calls spikes on Mondays and after big storms, and we can’t always answer quickly enough.
+
+Office hours are Monday through Friday, 7:00 AM to 3:30 PM Pacific. Most inspection scheduling calls are non-urgent and can go to voicemail, but we’d like Clara to grab the basics and propose a callback during office hours.
+
+An emergency for us is an active leak, a sprinkler piping break, a fire pump not starting when tested, or a building that has been red-tagged by the fire marshal.
+
+After hours we have a simple rotation: one tech is on call each week. Right now callers leave a voicemail, and the on-call tech has to listen to all of them. With Clara we’d like the on-call tech to get a much clearer summary of what’s going on.
+
+We use ServiceTrade too, but we do not want Clara to create jobs automatically yet.
+

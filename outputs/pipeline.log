@@ -1,7 +1,26 @@
-2026-03-04T09:36:29Z [INFO] Found accounts: bens_electric
-2026-03-04T09:36:29Z [WARN] Dataset currently has 1 demo accounts. Assignment expects 5 demo + 5 onboarding pairs; pipeline supports any count.
-2026-03-04T09:36:29Z [INFO] bens_electric: Generating v1 from demo transcript
-2026-03-04T09:36:29Z [INFO] bens_electric: Found onboarding transcript – generating v2 and changelog
-2026-03-04T09:36:29Z [INFO] bens_electric: Found structured onboarding form – merging on top of transcripts
-2026-03-04T09:36:29Z [INFO] bens_electric: Generated v2 memo, agent, and changelog
-2026-03-04T09:36:29Z [INFO] Done.
+2026-03-04T10:05:48Z [INFO] Found accounts: bens_electric, cityline_alarm, fireguard_sprinklers, northside_hvac, prime_electric, safeflow_fire
+2026-03-04T10:05:48Z [INFO] bens_electric: Generating v1 from demo transcript
+2026-03-04T10:05:48Z [INFO] bens_electric: Found onboarding transcript – generating v2 and changelog
+2026-03-04T10:05:48Z [INFO] bens_electric: Found structured onboarding form – merging on top of transcripts
+2026-03-04T10:05:48Z [INFO] bens_electric: Generated v2 memo, agent, and changelog
+2026-03-04T10:05:48Z [INFO] cityline_alarm: Generating v1 from demo transcript
+2026-03-04T10:05:48Z [INFO] cityline_alarm: Found onboarding transcript – generating v2 and changelog
+2026-03-04T10:05:48Z [INFO] cityline_alarm: Found structured onboarding form – merging on top of transcripts
+2026-03-04T10:05:48Z [INFO] cityline_alarm: Generated v2 memo, agent, and changelog
+2026-03-04T10:05:48Z [INFO] fireguard_sprinklers: Generating v1 from demo transcript
+2026-03-04T10:05:48Z [INFO] fireguard_sprinklers: Found onboarding transcript – generating v2 and changelog
+2026-03-04T10:05:48Z [INFO] fireguard_sprinklers: Found structured onboarding form – merging on top of transcripts
+2026-03-04T10:05:48Z [INFO] fireguard_sprinklers: Generated v2 memo, agent, and changelog
+2026-03-04T10:05:48Z [INFO] northside_hvac: Generating v1 from demo transcript
+2026-03-04T10:05:48Z [INFO] northside_hvac: Found onboarding transcript – generating v2 and changelog
+2026-03-04T10:05:48Z [INFO] northside_hvac: Found structured onboarding form – merging on top of transcripts
+2026-03-04T10:05:48Z [INFO] northside_hvac: Generated v2 memo, agent, and changelog
+2026-03-04T10:05:48Z [INFO] prime_electric: Generating v1 from demo transcript
+2026-03-04T10:05:48Z [INFO] prime_electric: Found onboarding transcript – generating v2 and changelog
+2026-03-04T10:05:48Z [INFO] prime_electric: Found structured onboarding form – merging on top of transcripts
+2026-03-04T10:05:48Z [INFO] prime_electric: Generated v2 memo, agent, and changelog
+2026-03-04T10:05:48Z [INFO] safeflow_fire: Generating v1 from demo transcript
+2026-03-04T10:05:48Z [INFO] safeflow_fire: Found onboarding transcript – generating v2 and changelog
+2026-03-04T10:05:48Z [INFO] safeflow_fire: Found structured onboarding form – merging on top of transcripts
+2026-03-04T10:05:48Z [INFO] safeflow_fire: Generated v2 memo, agent, and changelog
+2026-03-04T10:05:48Z [INFO] Done.

@@ -1,0 +1,15 @@
+Speaker: General Manager
+Company: CityLine Alarm & Monitoring
+
+Our standard hours are Monday through Friday, 9:00 AM to 5:00 PM Eastern Time. Billing and sales calls go to the main office line; service issues go to the service queue.
+
+For emergencies we only want Clara to escalate when either the monitoring center has already contacted the customer about an alarm or when there is a continuous trouble on the fire alarm panel that the customer cannot silence. Those should be called out as high priority.
+
+During office hours, Clara should collect caller name, site name, callback number, panel type if they know it, and whether the monitoring center has called. Then route to the service queue.
+
+After hours, if the situation matches that emergency definition, Clara should capture the same details and then page the on‑call technician by transferring to the on‑call number. If the transfer rings more than 60 seconds, Clara should return to the caller, apologize, and promise a callback as soon as the technician receives the page.
+
+Non‑emergency calls after hours can be logged with all details and clearly tagged as next‑business‑day follow up.
+
+Our ticketing system is internal only. Clara should never say that a ticket number has been created; just that our team will follow up.
+

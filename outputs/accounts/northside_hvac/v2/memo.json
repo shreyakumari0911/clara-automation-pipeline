@@ -1,0 +1,57 @@
+{
+  "account_id": "northside_hvac",
+  "company_name": "Northside HVAC & Cooling",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "07:30",
+    "end": "17:00",
+    "timezone": "CT",
+    "raw": "Mon–Fri 7:30 AM–5:00 PM CT"
+  },
+  "office_address": "",
+  "services_supported": [
+    "We handle commercial HVAC maintenance",
+    "emergency calls for office buildings",
+    "small retail"
+  ],
+  "emergency_definition": [
+    "loss of heating in winter",
+    "loss of cooling in a critical area like a server room",
+    "medical space"
+  ],
+  "emergency_routing_rules": {
+    "raw": "After hours, for true emergencies Clara should confirm that definition, then take full details and attempt to transfer to the on‑call dispatcher. If no one answers within 45 seconds, return to the caller, apologize, and confirm that a tech will call back as soon as possible. For non‑emergency calls after hours, collect the details and clearly state that our office will follow up during business hours.",
+    "steps": [
+      "After hours, for true emergencies Clara should confirm that definition, then take full details and attempt to transfer to the on‑call dispatcher. If no one answers within 45 seconds, return to the caller, apologize, and confirm that a tech will call back as soon as possible.",
+      "For non‑emergency calls after hours, collect the details and clearly state that our office will follow up during business hours."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "During business hours transfer emergency unit-down calls to the dispatcher queue. After hours transfer emergencies to the on-call dispatcher; if no answer within 45 seconds, return to caller, apologize, and take a full message.",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "Internal HVAC ticketing system only; Clara should not log into or modify any external systems.",
+  "after_hours_flow_summary": "To lock this in: business hours are Monday through Friday, 7:30 AM to 5:00 PM Central Time. Outside those hours we treat everything as after hours. After hours, for true emergencies Clara should confirm that definition, then take full details and attempt to transfer to the on‑call dispatcher. If no one answers within 45 seconds, return to the caller, apologize, and confirm that a tech will call back as soon as possible. For non‑emergency calls after hours, collect the details and clearly state that our office will follow up during business hours.",
+  "office_hours_flow_summary": "During business hours, Clara should always collect caller name, callback number, company name, and site address. If the reason is a unit down, no heating, or no cooling, transfer to the dispatcher queue. If the issue is routine maintenance or filter changes, just take a message for the coordinators. For non‑emergency calls after hours, collect the details and clearly state that our office will follow up during business hours.",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript).",
+    "Missing integration constraints (not found or unclear in transcript)."
+  ],
+  "notes": [
+    "Structured form override for 'business_hours': 'raw' overridden: previous='To lock this in: business hours are Monday through Friday, 7:30 AM to 5:00 PM Central Time. Outside those hours we treat everything as after hours.', new='Mon–Fri 7:30 AM–5:00 PM CT'.",
+    "Structured form override for 'call_transfer_rules': 'raw' overridden: previous='During business hours, Clara should always collect caller name, callback number, company name, and site address. If the reason is a unit down, no heating, or no cooling, transfer to the dispatcher queue. If the issue is routine maintenance or filter changes, just take a message for the coordinators.', new='During business hours transfer emergency unit-down calls to the dispatcher queue. After hours transfer emergencies to the on-call dispatcher; if no answer within 45 seconds, return to caller, apologize, and take a full message.'."
+  ]
+}

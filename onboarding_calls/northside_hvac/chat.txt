@@ -1,0 +1,15 @@
+Speaker: Operations Manager
+Company: Northside HVAC & Cooling
+
+To lock this in: business hours are Monday through Friday, 7:30 AM to 5:00 PM Central Time. Outside those hours we treat everything as after hours.
+
+During business hours, Clara should always collect caller name, callback number, company name, and site address. If the reason is a unit down, no heating, or no cooling, transfer to the dispatcher queue. If the issue is routine maintenance or filter changes, just take a message for the coordinators.
+
+For emergencies, we define them as no heat in winter for the whole space, no cooling in a server room or critical medical space, or burning smells coming from a rooftop unit. Noise complaints and comfort issues are not emergencies.
+
+After hours, for true emergencies Clara should confirm that definition, then take full details and attempt to transfer to the on‑call dispatcher. If no one answers within 45 seconds, return to the caller, apologize, and confirm that a tech will call back as soon as possible.
+
+For non‑emergency calls after hours, collect the details and clearly state that our office will follow up during business hours.
+
+We do not want Clara logging into any external system. Just summarize the call clearly so a human can open the ticket in our HVAC platform.
+

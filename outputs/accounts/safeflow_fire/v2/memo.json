@@ -1,0 +1,51 @@
+{
+  "account_id": "safeflow_fire",
+  "company_name": "SafeFlow Fire Protection",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "07:00",
+    "end": "15:30",
+    "timezone": "PT",
+    "raw": "Mon–Fri 7:00 AM–3:30 PM PT"
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [],
+  "emergency_routing_rules": {
+    "raw": "After hours, Clara needs to decide if it is an emergency based on that definition. For emergencies, collect full details and then transfer to the on‑call technician. If the transfer rings longer than 60 seconds, cancel the transfer, return to the caller, apologize, and confirm that the tech will call back as soon as they receive the page. For non‑emergency calls after hours, log all the information and let the caller know that the office will follow up during the next business day.",
+    "steps": [
+      "After hours, Clara needs to decide if it is an emergency based on that definition. For emergencies, collect full details and then transfer to the on‑call technician. If the transfer rings longer than 60 seconds, cancel the transfer, return to the caller, apologize, and confirm that the tech will call back as soon as they receive the page.",
+      "For non‑emergency calls after hours, log all the information and let the caller know that the office will follow up during the next business day."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "For qualifying fire protection emergencies, transfer to the on-call technician. If the transfer rings longer than 60 seconds, go back to the caller, apologize, and confirm details for dispatch.",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "ServiceTrade is required for all work. Clara should not create or modify jobs directly.",
+  "after_hours_flow_summary": "After hours, Clara needs to decide if it is an emergency based on that definition. For emergencies, collect full details and then transfer to the on‑call technician. If the transfer rings longer than 60 seconds, cancel the transfer, return to the caller, apologize, and confirm that the tech will call back as soon as they receive the page. For non‑emergency calls after hours, log all the information and let the caller know that the office will follow up during the next business day.",
+  "office_hours_flow_summary": "During business hours, Clara should gather caller name, callback number, building name, and address. If the call is about inspections or testing, taking a message and putting it in the inspection work queue is fine. If the call is about a known system impairment, Clara should flag it as high priority and transfer to the coordinator.",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing services supported (not found or unclear in transcript).",
+    "Missing emergency definition (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript)."
+  ],
+  "notes": [
+    "Structured form override for 'business_hours': 'raw' overridden: previous='Our business hours are Monday through Friday, 7:00 AM to 3:30 PM Pacific Time. After that we switch to an on‑call rotation.', new='Mon–Fri 7:00 AM–3:30 PM PT'.",
+    "Structured form override for 'call_transfer_rules': 'raw' overridden: previous='During business hours, Clara should gather caller name, callback number, building name, and address. If the call is about inspections or testing, taking a message and putting it in the inspection work queue is fine. If the call is about a known system impairment, Clara should flag it as high priority and transfer to the coordinator.', new='For qualifying fire protection emergencies, transfer to the on-call technician. If the transfer rings longer than 60 seconds, go back to the caller, apologize, and confirm details for dispatch.'.",
+    "Structured form override for 'integration_constraints': previous value='We use ServiceTrade for all fire protection work. Clara must never create jobs or change schedules in ServiceTrade; only capture information for our staff.', new value='ServiceTrade is required for all work. Clara should not create or modify jobs directly.'."
+  ]
+}

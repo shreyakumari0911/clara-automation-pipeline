@@ -1,0 +1,13 @@
+Speaker: Operations Manager
+Company: Northside HVAC & Cooling
+
+We handle commercial HVAC maintenance and emergency calls for office buildings and small retail. Most of our pain is that the receptionist can only take one call at a time, so overflow callers hang up.
+
+Business hours are Monday to Friday, 7:30 AM to 5:00 PM Central. During those hours, calls should go to the dispatcher if possible, otherwise to any available coordinator.
+
+Typical reasons for calling are no cooling, no heating, strange noises from rooftop units, or scheduled filter changes.
+
+For us, an emergency is loss of heating in winter or loss of cooling in a critical area like a server room or medical space. Noise issues and comfort complaints are usually not emergencies.
+
+After hours today we have a basic answering service. They take a message and then text our on-call tech, but they almost never ask enough questions. We want Clara to do a better job collecting details and confirming whether it is truly urgent.
+

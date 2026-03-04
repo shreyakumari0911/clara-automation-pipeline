@@ -1,0 +1,6 @@
+{
+  "business_hours": "Mon–Fri 7:00 AM–3:30 PM PT",
+  "call_transfer_rules": "For qualifying fire protection emergencies, transfer to the on-call technician. If the transfer rings longer than 60 seconds, go back to the caller, apologize, and confirm details for dispatch.",
+  "integration_constraints": "ServiceTrade is required for all work. Clara should not create or modify jobs directly."
+}
+

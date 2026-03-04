@@ -1,0 +1,15 @@
+Speaker: Owner
+Company: FireGuard Sprinkler Services
+
+Our main issue is missed after-hours calls. Right now we forward everything to a single cell phone, and if that person is on another call, emergencies get missed.
+
+During the day our office is open Monday through Friday, 8:00 AM to 4:30 PM, Pacific Time. Calls ring the front desk first, and if they are busy they overflow to the service coordinator.
+
+We mostly handle wet and dry sprinkler systems, plus annual and five-year inspections. We do not want Clara trying to sell anything, just route service calls and inspection requests.
+
+If a sprinkler is actively leaking or a head has been damaged, we consider that an emergency. Same thing if the fire department has been out and they tell the customer to call us right away.
+
+Right now after hours we ask callers to leave a voicemail and then the tech on call checks it. Half the time they forget to leave a callback number. We want Clara to capture the name, callback number, and what’s going on, then try to reach the on-call tech.
+
+We use ServiceTrade for all jobs. For now, Clara should not create jobs directly; just capture details so the office can create the job in the morning.
+

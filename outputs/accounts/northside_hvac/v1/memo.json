@@ -1,0 +1,55 @@
+{
+  "account_id": "northside_hvac",
+  "company_name": "Northside HVAC & Cooling",
+  "business_hours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "start": "07:30",
+    "end": "17:00",
+    "timezone": "CT",
+    "raw": "Business hours are Monday to Friday, 7:30 AM to 5:00 PM Central. During those hours, calls should go to the dispatcher if possible, otherwise to any available coordinator."
+  },
+  "office_address": "",
+  "services_supported": [
+    "We handle commercial HVAC maintenance",
+    "emergency calls for office buildings",
+    "small retail"
+  ],
+  "emergency_definition": [
+    "loss of heating in winter",
+    "loss of cooling in a critical area like a server room",
+    "medical space"
+  ],
+  "emergency_routing_rules": {
+    "raw": "We handle commercial HVAC maintenance and emergency calls for office buildings and small retail. Most of our pain is that the receptionist can only take one call at a time, so overflow callers hang up.",
+    "steps": [
+      "We handle commercial HVAC maintenance and emergency calls for office buildings and small retail. Most of our pain is that the receptionist can only take one call at a time, so overflow callers hang up."
+    ]
+  },
+  "non_emergency_routing_rules": {
+    "raw": "",
+    "steps": []
+  },
+  "call_transfer_rules": {
+    "raw": "",
+    "timeout_seconds": null,
+    "retries": null,
+    "what_to_say_if_fails": ""
+  },
+  "integration_constraints": "",
+  "after_hours_flow_summary": "After hours today we have a basic answering service. They take a message and then text our on-call tech, but they almost never ask enough questions. We want Clara to do a better job collecting details and confirming whether it is truly urgent.",
+  "office_hours_flow_summary": "",
+  "questions_or_unknowns": [
+    "Missing office address (not found or unclear in transcript).",
+    "Missing non-emergency routing rules (not found or unclear in transcript).",
+    "Missing call transfer rules (not found or unclear in transcript).",
+    "Missing integration constraints (not found or unclear in transcript).",
+    "Missing office-hours flow summary (not found or unclear in transcript)."
+  ],
+  "notes": []
+}
