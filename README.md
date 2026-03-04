@@ -9,42 +9,8 @@ The pipeline converts demo call and onboarding transcripts into structured **Acc
 ---
 
 ### Architecture Diagram
+<img width="2241" height="2002" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/ffb49a18-d67a-4451-8b62-359fc5c40750" />
 
-flowchart TD
-
-A["Demo transcript <br/> demo_calls/account_id/chat.txt"] --> B["extract_account_data.py <br/> Generate v1 memo.json"]
-
-B --> C["generate_agent_prompt.py <br/> Generate v1 agent.json"]
-
-C --> O1["outputs/accounts/account_id/v1"]
-
-D["Onboarding transcript <br/> onboarding_calls/account_id/chat.txt"] --> E["extract_account_data.py <br/> Generate onboarding memo"]
-
-B --> F["apply_patch.merge_memos <br/> Merge demo + onboarding"]
-
-E --> F
-
-G["Optional onboarding form <br/> onboarding_calls/account_id/form.json"] --> H["apply_patch.merge_structured_form <br/> Override + conflict notes"]
-
-F --> H
-
-H --> I["generate_agent_prompt.py <br/> Generate v2 agent.json"]
-
-B --> J["diff_generator.py <br/> Compute v1 vs v2 diff"]
-
-H --> J
-
-I --> J
-
-J --> O2["outputs/accounts/account_id/v2 <br/> memo.json agent.json changelog.md"]
-
-K["run_all.py <br/> Batch orchestrator"] --> B
-K --> E
-K --> H
-K --> I
-K --> J
-
-N["n8n optional <br/> workflows/n8n_workflow.json"] --> K
 
 ### Repository Structure
 
