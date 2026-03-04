@@ -14,10 +14,10 @@ Local, zero-cost pipeline that turns demo + onboarding transcripts into versione
 
 ```mermaid
 flowchart TD
-  A[demo_calls/<account_id>/chat.txt] --> B[v1 memo.json]
+  A["demo_calls/ACCOUNT_ID/chat.txt"] --> B["v1 memo.json"]
   B --> C[v1 agent.json]
-  D[onboarding_calls/<account_id>/chat.txt] --> E[v2 memo.json]
-  F[onboarding_calls/<account_id>/form.json (optional)] --> E
+  D["onboarding_calls/ACCOUNT_ID/chat.txt"] --> E["v2 memo.json"]
+  F["onboarding_calls/ACCOUNT_ID/form.json (optional)"] --> E
   E --> G[v2 agent.json]
   B --> H[changelog.md]
   E --> H
@@ -121,5 +121,6 @@ Import `workflows/n8n_workflow.json` in n8n (`http://localhost:5678`). The workf
 
 - Transcript parsing is heuristic (regex/keywords). If a transcript is vague, you’ll see more items in `questions_or_unknowns`.
 - Audio transcription is intentionally out of scope; provide `chat.txt` transcripts as input.
+
 
 
