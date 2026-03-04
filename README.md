@@ -10,34 +10,41 @@ The pipeline converts demo call and onboarding transcripts into structured **Acc
 
 ### Architecture Diagram
 
-```mermaid
 flowchart TD
-  A[Demo transcript\n demo_calls/<account_id>/chat.txt] --> B[extract_account_data.py\nGenerate v1 memo.json]
-  B --> C[generate_agent_prompt.py\nGenerate v1 agent.json]
-  C --> O1[outputs/accounts/<account_id>/v1/]
 
-  D[Onboarding transcript\n onboarding_calls/<account_id>/chat.txt] --> E[extract_account_data.py\nGenerate onboarding memo]
-  B --> F[apply_patch.merge_memos\nMerge demo + onboarding]
-  E --> F
+A["Demo transcript <br/> demo_calls/account_id/chat.txt"] --> B["extract_account_data.py <br/> Generate v1 memo.json"]
 
-  G[Optional onboarding form\n onboarding_calls/<account_id>/form.json] --> H[apply_patch.merge_structured_form\nOverride + conflict notes]
-  F --> H
+B --> C["generate_agent_prompt.py <br/> Generate v1 agent.json"]
 
-  H --> I[generate_agent_prompt.py\nGenerate v2 agent.json]
-  B --> J[diff_generator.py\nCompute v1↔v2 diff]
-  H --> J
-  I --> J
+C --> O1["outputs/accounts/account_id/v1"]
 
-  J --> O2[outputs/accounts/<account_id>/v2/\nmemo.json, agent.json, changelog.md]
+D["Onboarding transcript <br/> onboarding_calls/account_id/chat.txt"] --> E["extract_account_data.py <br/> Generate onboarding memo"]
 
-  K[run_all.py\nBatch orchestrator] --> B
-  K --> E
-  K --> H
-  K --> I
-  K --> J
+B --> F["apply_patch.merge_memos <br/> Merge demo + onboarding"]
 
-  N[n8n (optional)\nworkflows/n8n_workflow.json] --> K
-```
+E --> F
+
+G["Optional onboarding form <br/> onboarding_calls/account_id/form.json"] --> H["apply_patch.merge_structured_form <br/> Override + conflict notes"]
+
+F --> H
+
+H --> I["generate_agent_prompt.py <br/> Generate v2 agent.json"]
+
+B --> J["diff_generator.py <br/> Compute v1 vs v2 diff"]
+
+H --> J
+
+I --> J
+
+J --> O2["outputs/accounts/account_id/v2 <br/> memo.json agent.json changelog.md"]
+
+K["run_all.py <br/> Batch orchestrator"] --> B
+K --> E
+K --> H
+K --> I
+K --> J
+
+N["n8n optional <br/> workflows/n8n_workflow.json"] --> K
 
 ### Repository Structure
 
