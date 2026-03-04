@@ -11,9 +11,7 @@ Local, zero-cost pipeline that turns demo + onboarding transcripts into versione
 ---
 **Explanation video**
 
-
-Uploading Video Project 2.mp4…
-
+https://drive.google.com/file/d/1EuE_rEZ_o27yV_KlKa99JZxBn-Irc_xk/view?usp=sharing
 
 ---
 ### Data flow (high level)
